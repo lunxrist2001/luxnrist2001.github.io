@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт-визитка</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#contact">Контакты</a></li>
+                <li><a href="#register">Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section active">
+        <div class="video-container">
+            <div class="animated-background"></div>
+            <div class="overlay"></div>
+        </div>
+        <div class="home-content">
+            <h1>Добро пожаловать на мой сайт</h1>
+            <p>Современный и красивый сайт-визитка с анимациями</p>
+            <div class="animated-button">
+                <a href="#about" class="scroll-link">Узнать больше</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2>О нас</h2>
+        <p>Здесь будет информация о компании или персоне</p>
+    </section>
+
+    <section id="services" class="section">
+        <h2>Наши услуги</h2>
+        <div class="services-grid">
+            <div class="service-card">Услуга 1</div>
+            <div class="service-card">Услуга 2</div>
+            <div class="service-card">Услуга 3</div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Контакты</h2>
+        <form id="contactForm">
+            <input type="text" placeholder="Имя" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Сообщение" required></textarea>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <section id="register" class="section">
+        <h2>Регистрация</h2>
+        <div class="auth-container">
+            <div class="auth-tabs">
+                <button class="tab-button active" data-tab="login">Вход</button>
+                <button class="tab-button" data-tab="register">Регистрация</button>
+            </div>
+            
+            <div id="login" class="auth-tab-content active">
+                <form id="loginForm">
+                    <input type="text" placeholder="Имя пользователя" required>
+                    <input type="password" placeholder="Пароль" required>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox"> Запомнить меня</label>
+                        <a href="#">Забыли пароль?</a>
+                    </div>
+                    <button type="submit">Войти</button>
+                </form>
+            </div>
+            
+            <div id="register" class="auth-tab-content">
+                <form id="registerForm">
+                    <input type="text" placeholder="Имя пользователя" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" id="password" placeholder="Пароль" required>
+                    <input type="password" placeholder="Подтверждение пароля" required>
+                    <div class="password-strength">
+                        <div class="strength-bar">
+                            <div class="strength-meter"></div>
+                        </div>
+                        <span class="strength-text">Сложность пароля: <span id="strengthLevel">Слабый</span></span>
+                    </div>
+                    <div class="terms">
+                        <label>
+                            <input type="checkbox" required> Я согласен с <a href="#">условиями использования</a>
+                        </label>
+                    </div>
+                    <button type="submit">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
